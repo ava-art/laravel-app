@@ -20,8 +20,8 @@ const app = createApp({
         let url = window.location.pathname
         let slug = url.substring(url.lastIndexOf('/')+1)
         this.$store.commit('SET_SLUG', slug)
-        this.$store.dispatch('getArticleData', slug)
-        this.$store.dispatch('viewsIncrement', slug)
+        this.$store.dispatch('article/getArticleData', slug)
+        this.$store.dispatch('article/viewsIncrement', slug)
     }
 });
 
